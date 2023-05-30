@@ -34,10 +34,10 @@ def TestOneInput(data):
         except IndexError as e:
             if 'out of bounds' in str(e):
                 return -1
-        except TypeError:
-            if ctr > 100:
-                raise
-            return -1
+        #except TypeError:
+          #  if ctr > 100:
+           #     raise
+            #return -1
 def main():
     atheris.Setup(sys.argv, TestOneInput)
     atheris.Fuzz()
