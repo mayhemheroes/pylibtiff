@@ -1,0 +1,8 @@
+project: pylibtiff
+target: fuzz-tiff
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_tiff.py
+    libfuzzer: true
