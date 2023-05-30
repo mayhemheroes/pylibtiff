@@ -25,6 +25,7 @@ def TestOneInput(data):
     global ctr
     ctr += 1
     with nostdout():
+    #TODO: Compile Native Extensions
         try:
             with fdp.ConsumeTemporaryFile(suffix='.tif', as_bytes=True) as f:
                 TIFFfile(f)
@@ -34,7 +35,7 @@ def TestOneInput(data):
             if 'out of bounds' in str(e):
                 return -1
         except TypeError:
-            if ctr > 10000:
+            if ctr > 100:
                 raise
             return -1
 def main():
